@@ -1,0 +1,74 @@
+{
+  "name": "@darkobits/publish-root",
+  "description": "Massage your package tarballs.",
+  "version": "0.1.0",
+  "license": "WTFPL",
+  "contributors": [
+    {
+      "name": "Joshua Martin",
+      "email": "joshua@frontlawn.net"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darkobits/publish-root.git"
+  },
+  "engines": {
+    "npm": "^5.0.0",
+    "node": "^8.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "pr:pre": "dist/bin/prepack.js",
+    "pr:post": "dist/bin/postpack.js"
+  },
+  "scripts": {
+    "lint": "xo",
+    "test": "jest",
+    "test:watch": "npm t -- --watch",
+    "test:coverage": "npm t -- --coverage",
+    "prebuild": "rimraf dist",
+    "build": "babel src --out-dir dist --no-comments",
+    "prepublish": "run-p lint build",
+    "prebump": "npm run prepublish",
+    "bump": "standard-version"
+  },
+  "dependencies": {
+    "@darkobits/log": "^1.0.0",
+    "configstore": "^3.1.1",
+    "convert-hrtime": "^2.0.0",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "1.x",
+    "eslint": "4.x",
+    "husky": "0.14.x",
+    "jest": "20.x",
+    "npm-run-all": "4.x",
+    "rimraf": "2.x",
+    "standard-version": "4.x",
+    "xo": "0.18.x"
+  },
+  "xo": {
+    "env": [
+      "browser",
+      "jest"
+    ],
+    "space": true,
+    "rules": {
+      "max-nested-callbacks": "off",
+      "no-multiple-empty-lines": "off",
+      "prefer-arrow-callback": "off",
+      "space-before-function-paren": [
+        "error",
+        {
+          "named": "always"
+        }
+      ]
+    }
+  }
+}
