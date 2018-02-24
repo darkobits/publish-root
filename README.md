@@ -1,4 +1,4 @@
-# publish-root
+![publish-root](https://user-images.githubusercontent.com/441546/36626664-b601c7a6-18eb-11e8-879e-dd056a364e07.png)
 
 [![NPM Version][npm-img]][npm-url] [![david][david-img]][david-url] [![Code Style][xo-img]][xo-url]
 
