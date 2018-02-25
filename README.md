@@ -1,18 +1,17 @@
 ![publish-root](https://user-images.githubusercontent.com/441546/36626664-b601c7a6-18eb-11e8-879e-dd056a364e07.png)
 
-[![NPM Version][npm-img]][npm-url] [![david][david-img]][david-url] [![Code Style][xo-img]][xo-url]
+[![][npm-img]][npm-url] [![][travis-img]][travis-url] [![][david-img]][david-url] [![][cc-img]][cc-url] [![][xo-img]][xo-url]
 
-In large/complex packages, it is often handy to utilize the filesystem in addition to exports to organize and namespace things. However, it can be obnoxious to require your consumers to include a path segment like `dist` when importing a module from your package; it bears no semantic meaning and is often required on every import because it's where all of your package's build artifacts live.
+In large/complex packages, it is sometimes handy to utilize the filesystem in addition to exports to organize and namespace things. However, it can be obnoxious to require your consumers to include a path segment like `/dist/` when importing a module from your package; it bears no semantic meaning and is often required on every import because it's where all of your package's build artifacts live.
 
 This package attempts to address that issue. Tell it what folder your build artifacts are in, and it ensures your tarballs are packed correctly.
 
-## Setup
-
-Install:
+# Install
 
 ```bash
-$ npm install @darkobits/publish-root
+$ npm i -D @darkobits/publish-root
 ```
+# Use
 
 Then, add the following scripts to your project's `package.json`:
 
@@ -40,13 +39,6 @@ $ tar -tvf your-package-name-1.2.3.tgz
 
 You do not need to change anything in `package.json`; relevant fields will be re-written and restored automagically.
 
----
-
-This approach has the following benefits:
-
-- Works with Lerna (install in each package, not at the root)
-- Does not break `npm link`.
-
 ## See Also
 
 - [Publishing flat NPM packages for easier import paths & smaller consumer bundle sizes](https://davidwells.io/blog/publishing-flat-npm-packages-for-easier-import-paths-smaller-consumer-bundle-sizes/)
@@ -62,8 +54,14 @@ This approach has the following benefits:
 [npm-img]: https://img.shields.io/npm/v/@darkobits/publish-root.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/@darkobits/publish-root
 
+[travis-img]: https://img.shields.io/travis/darkobits/publish-root.svg?style=flat-square
+[travis-url]: https://travis-ci.org/darkobits/publish-root
+
 [david-img]: https://img.shields.io/david/darkobits/publish-root.svg?style=flat-square
 [david-url]: https://david-dm.org/darkobits/publish-root
+
+[cc-img]: https://img.shields.io/badge/conventional%20commits-1.0.0-027dc6.svg?style=flat-square
+[cc-url]: https://github.com/conventional-changelog/standard-version
 
 [xo-img]: https://img.shields.io/badge/code_style-XO-e271a5.svg?style=flat-square
 [xo-url]: https://github.com/sindresorhus/xo
