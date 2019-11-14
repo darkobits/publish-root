@@ -42,11 +42,16 @@ export const EXCLUDE_FROM_BACKUP = [
  */
 export const REWRITE_FIELDS = [
   'bin',
-  'directories',
-  'main',
   'browser',
+  'directories',
+  'jsdelivr',
+  'main',
+  'man',
   'module',
-  'man'
+  'types',
+  'typings',
+  'umd:main',
+  'unpkg'
 ];
 
 

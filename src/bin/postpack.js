@@ -35,8 +35,8 @@ import log from '../lib/log';
     }
 
     log.verbose('restore', 'Restore complete.');
-  } catch (err) {
-    log.error('', err);
+  } catch (error) {
+    log.error('', error);
     process.exit(1);
   } finally {
     config.delete('startTime');

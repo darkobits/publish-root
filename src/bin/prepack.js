@@ -73,8 +73,8 @@ import log from '../lib/log';
 
     // Write temporary manifest.
     await writeJson('package.json', pkgJson, {spaces: 2});
-  } catch (err) {
-    log.error('', err);
+  } catch (error) {
+    log.error('', error);
     process.exit(1);
   } finally {
     config.delete('startTime');
