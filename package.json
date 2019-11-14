@@ -13,10 +13,6 @@
     "type": "git",
     "url": "https://github.com/darkobits/publish-root.git"
   },
-  "engines": {
-    "npm": "^5.0.0",
-    "node": "^6.0.0"
-  },
   "files": [
     "dist"
   ],
