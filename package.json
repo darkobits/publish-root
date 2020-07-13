@@ -45,7 +45,7 @@
     "eslint": "4.x",
     "npm-run-all": "4.x",
     "rimraf": "2.x",
-    "standard-version": "4.x",
+    "standard-version": "8.x",
     "xo": "0.18.x"
   },
   "xo": {
